@@ -1,0 +1,28 @@
+{
+  "name": "Brand-New-Era-",
+  "version": "1.0.0",
+  "description": "Bug reproducer for async event handling race condition",
+  "main": "reproducer.js",
+  "scripts": {
+    "reproduce": "node --expose-gc reproducer.js",
+    "reproduce:verbose": "DEBUG=* node --expose-gc reproducer.js",
+    "test:fixed": "node --expose-gc test-fixed.js",
+    "compare": "echo '=== BUGGY ===' && npm run reproduce && echo '=== FIXED ===' && npm run test:fixed"
+  },
+  "keywords": [
+    "bug-reproducer",
+    "race-condition",
+    "event-emitter",
+    "memory-leak",
+    "async"
+  ],
+  "author": "etkerus-ship-it",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.4"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

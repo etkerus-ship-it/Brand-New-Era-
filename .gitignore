@@ -1,0 +1,11 @@
+node_modules/
+npm-debug.log
+*.log
+.DS_Store
+isolate-*.log
+heap-*.heapsnapshot
+.env
+.env.local
+*.heapsnapshot
+.vscode/
+.idea/
